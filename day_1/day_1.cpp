@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string.h>
 
-int max_calories(std::ifstream &input_file){
+double max_calories(std::ifstream &input_file){
     std::string line;
     
     double tot_elf = 0;
@@ -31,7 +31,7 @@ int max_calories(std::ifstream &input_file){
     return local_max;
 }
 
-int top_three_calories(std::ifstream &input_file){
+double top_three_calories(std::ifstream &input_file){
     std::string line;
     
     double tot_elf = 0;
@@ -90,7 +90,7 @@ int main ()
 
     double imax = max_calories(input_file);  // First half 
 
-    // Reset the stream to the beginnig
+    // Reset the stream to the beginning
     input_file.clear();
     input_file.seekg (0);
 
